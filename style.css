@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root {
+  --clr-primary: hsl(205, 86%, 17%);
+  --clr-secondary: hsl(209, 61%, 16%);
+  --clr-white: #fff;
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+img:not(.logo) {
+  width: 100%;
+}
+
+img {
+  display: block;
+}
+
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-white);
+}
+
+@media screen and (min-width: 800px) {
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/* section */
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 5rem auto;
+  max-width: 1170px;
+}
+
+/* Countdown Timer */
+
+.gift-img {
+  margin-bottom: 2rem;
+}
+
+.gift-info h3 {
+  text-transform: uppercase;
+  color: var(--clr-white);
+}
+
+.gift-info p {
+  color: var(--clr-white);
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 3rem;
+    width: 95vw;
+  }
+
+  .gift-img {
+    margin-bottom: 0;
+  }
+}
+
+.gift-info p {
+  margin: 2rem 0;
+}
+
+.deadline {
+  display: flex;
+}
+
+.deadline-format {
+  background: var(--clr-secondary);
+  color: var(--clr-white);
+  margin-right: 1rem;
+  width: 6rem;
+  height: 6rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.deadline-format span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+
+.deadline h4:not(.expired) {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: var(--spacing);
+}
